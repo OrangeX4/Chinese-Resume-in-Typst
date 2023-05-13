@@ -1,4 +1,4 @@
-# Resume in Typst
+# Chinese Resume in Typst
 
 使用 Typst 编写的中文简历.
 
@@ -25,7 +25,7 @@
     - macOS: `brew install`
     - Arch Linux: `pacman -S typst`
     - Windows: 基于 Rust 包管理器安装 `cargo install --git https://github.com/typst/typst`
-- 克隆本仓库: `git clone https://github.com/OrangeX4/resume.git`
+- 克隆本仓库: `git clone https://github.com/OrangeX4/Chinese-Resume-in-Typst.git`
 - 编译: `typst compile resume.typ`
 - VS Code 编辑: 安装 `Typst LSP` 插件后即可编辑
 
