@@ -24,8 +24,8 @@
   left: 2cm,
   right: 2cm,
   photograph: "",
-  photographWith: 0em,
-  gutterWith: 0em,
+  photographWidth: 0em,
+  gutterWidth: 0em,
   header,
   body
 ) = {
@@ -76,11 +76,11 @@
   
   // 首部与照片
   grid(
-    columns: (auto, 1fr, photographWith),
-    gutter: (gutterWith, 0em),
+    columns: (auto, 1fr, photographWidth),
+    gutter: (gutterWidth, 0em),
     header,
     if (photograph != "") {
-      image(photograph, width: photographWith)
+      image(photograph, width: photographWidth)
     }
   )
   

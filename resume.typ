@@ -29,8 +29,8 @@
   right: 2cm,
   // 如果不需要头像，则将下面的参数注释或删除
   photograph: "profile.jpg",
-  photographWith: 10em,
-  gutterWith: 2em,
+  photographWidth: 10em,
+  gutterWidth: 2em,
 )[
 
 = 方橙
