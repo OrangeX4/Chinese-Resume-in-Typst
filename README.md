@@ -34,11 +34,11 @@
 
 包含照片:
 
-![](resume-with-photograph.jpg)
+![](examples/resume-with-photograph.jpg)
 
 不包含照片:
 
-![](resume-without-photograph.jpg)
+![](examples/resume-without-photograph.jpg)
 
 
 ## 示例

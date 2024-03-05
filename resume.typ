@@ -2,16 +2,16 @@
 
 // 设置图标, 来源: https://fontawesome.com/icons/
 // 如果要修改图标颜色, 请手动修改 svg 文件中的 fill="rgb(38, 38, 125)" 属性
-#let faAward = icon("fa-award.svg")
-#let faBuildingColumns = icon("fa-building-columns.svg")
-#let faCode = icon("fa-code.svg")
-#let faEnvelope = icon("fa-envelope.svg")
-#let faGithub = icon("fa-github.svg")
-#let faGraduationCap = icon("fa-graduation-cap.svg")
-#let faLinux = icon("fa-linux.svg")
-#let faPhone = icon("fa-phone.svg")
-#let faWindows = icon("fa-windows.svg")
-#let faWrench = icon("fa-wrench.svg")
+#let faAward = icon("icons/fa-award.svg")
+#let faBuildingColumns = icon("icons/fa-building-columns.svg")
+#let faCode = icon("icons/fa-code.svg")
+#let faEnvelope = icon("icons/fa-envelope.svg")
+#let faGithub = icon("icons/fa-github.svg")
+#let faGraduationCap = icon("icons/fa-graduation-cap.svg")
+#let faLinux = icon("icons/fa-linux.svg")
+#let faPhone = icon("icons/fa-phone.svg")
+#let faWindows = icon("icons/fa-windows.svg")
+#let faWrench = icon("icons/fa-wrench.svg")
 
 // 主题颜色
 #let themeColor = rgb(38, 38, 125)

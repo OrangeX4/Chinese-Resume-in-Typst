@@ -10,10 +10,10 @@
   baseline: 0.125em,
   height: 1.0em,
   width: 1.25em,
-  image(path)
+  align(center + horizon, image(path))
 )
 
-#let faAngleRight = icon("fa-angle-right.svg")
+#let faAngleRight = icon("icons/fa-angle-right.svg")
 
 // 主体
 #let resume(
