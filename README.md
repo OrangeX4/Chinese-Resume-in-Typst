@@ -19,15 +19,11 @@
 模板链接: https://typst.app/project/rw1SLr0IIZZnCrkrsypRQF
 
 
-### 本地编辑
+### 本地编辑（推荐）
 
-- 安装 Typst:
-    - macOS: `brew install`
-    - Arch Linux: `pacman -S typst`
-    - Windows: 基于 Rust 包管理器安装 `cargo install --git https://github.com/typst/typst`
-- 克隆本仓库: `git clone https://github.com/OrangeX4/Chinese-Resume-in-Typst.git`
-- 编译: `typst compile resume.typ`
-- VS Code 编辑: 安装 `Typst LSP` 插件后即可编辑
+- 安装 VS Code，以及 Typst LSP 和 Typst Preview 插件。
+- 打开 `resume.typ` 文件，按下 `Ctrl + K V` 快捷键后即可显示与编辑。
+- 按下 `Shift + Ctrl + P` 后执行 `Typst: Export the currently open file as PDF` 即可导出 PDF 文件。
 
 
 ## 效果
