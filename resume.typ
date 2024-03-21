@@ -13,6 +13,7 @@
 #let faPhone = icon("icons/fa-phone.svg")
 #let faWindows = icon("icons/fa-windows.svg")
 #let faWrench = icon("icons/fa-wrench.svg")
+#let faWork = icon("icons/fa-work.svg")
 
 // 主题颜色
 #let themeColor = rgb(38, 38, 125)
@@ -117,6 +118,9 @@
   date[ 2021 年 11 月 – 2022 年 11 月 ]
 )
 
+// == #faWork 实习经历
+
+// 在这里添加你的实习经历
 
 == #faCode 项目经历
 
