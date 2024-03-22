@@ -26,7 +26,9 @@
   photograph: "",
   photographWidth: 0em,
   gutterWidth: 0em,
+  head_center : false,
   header,
+  introduction,
   body
 ) = {
   // 页边距设定
@@ -75,14 +77,23 @@
   show par: set block(spacing: 0.65em)
   
   // 首部与照片
-  grid(
-    columns: (auto, 1fr, photographWidth),
-    gutter: (gutterWidth, 0em),
-    header,
-    if (photograph != "") {
-      image(photograph, width: photographWidth)
-    }
-  )
+
+  if head_center {
+    assert(photograph == "", message: "can not centerize the name with the photo")
+    align(alignment.center, header)
+    introduction
+  } else {
+    grid(
+      columns: (auto, 1fr, photographWidth),
+      gutter: (gutterWidth, 0em),
+      
+      [#header 
+      #introduction],
+      if (photograph != "") {
+        image(photograph, width: photographWidth)
+      }
+    )
+  }
   
   body
 }
