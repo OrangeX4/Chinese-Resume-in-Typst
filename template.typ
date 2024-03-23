@@ -26,7 +26,7 @@
   photograph: "",
   photographWidth: 0em,
   gutterWidth: 0em,
-  head_center : false,
+  headerCenter : false,
   header,
   introduction,
   body
@@ -78,7 +78,7 @@
   
   // 首部与照片
 
-  if head_center {
+  if headerCenter {
     assert(photograph == "", message: "can not centerize the name with the photo")
     align(alignment.center, header)
     introduction
