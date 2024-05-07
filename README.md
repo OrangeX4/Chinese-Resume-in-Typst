@@ -23,7 +23,7 @@
 
 - 安装 VS Code，以及 Tinymist Typst 和 Typst Preview 插件。
 - 打开 `resume.typ` 文件，按下 `Ctrl + K V` 快捷键后即可显示与编辑。
-- 按下 `Shift + Ctrl + P` 后执行 `Typst: Export the currently open file as PDF` 即可导出 PDF 文件。
+- 点击编辑区顶部的 `Export PDF` 按钮即可导出 PDF 文件。
 
 
 ## 效果
