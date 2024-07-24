@@ -13,6 +13,7 @@
 #let faPhone = icon("icons/fa-phone.svg")
 #let faWindows = icon("icons/fa-windows.svg")
 #let faWrench = icon("icons/fa-wrench.svg")
+#let faWork = icon("icons/fa-work.svg")
 
 // 主题颜色
 #let themeColor = rgb(38, 38, 125)
@@ -28,7 +29,11 @@
   bottom: 2cm,
   left: 2cm,
   right: 2cm,
-  // 如果不需要头像，则将下面的参数注释或删除
+
+  // 如果需要姓名及联系信息居中，请删除下面关于头像的三行参数，并取消headerCenter的注释
+  //headerCenter : true,
+  
+  // 如果不需要头像，则将下面三行的参数注释或删除
   photograph: "profile.jpg",
   photographWidth: 10em,
   gutterWidth: 2em,
@@ -62,10 +67,10 @@
     link: "https://github.com/orangex4",
   ),
 )
-
+][
 #h(2em)  // 手动顶行, 2em 代表两个字的宽度
-我是 OrangeX4，你也可以叫我 *一只方橙* 或 *方橙*。现在是南京大学人工智能学院 2020 级本科生，正深陷于学习数学、编程和英语的无边苦海中。你问为什么我的名字那么奇怪？ 大概是我喜欢吃橘子和橙子，又谐音方程，还有和我的名字谐音的缘故吧。喜欢一切新奇的东西，兴趣十分广泛。
 
+我是 OrangeX4，你也可以叫我 *一只方橙* 或 *方橙*。现在是南京大学人工智能学院 2020 级本科生，正深陷于学习数学、编程和英语的无边苦海中。你问为什么我的名字那么奇怪？ 大概是我喜欢吃橘子和橙子，又谐音方程，还有和我的名字谐音的缘故吧。喜欢一切新奇的东西，兴趣十分广泛。
 ]
 
 
@@ -117,6 +122,9 @@
   date[ 2021 年 11 月 – 2022 年 11 月 ]
 )
 
+// == #faWork 实习经历
+
+// 在这里添加你的实习经历
 
 == #faCode 项目经历
 
