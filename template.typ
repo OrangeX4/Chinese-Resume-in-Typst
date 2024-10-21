@@ -100,9 +100,9 @@
 
 
 // 带竖线的侧边栏
-#let sidebar(side, content, withLine: true, sideWidth: 12%) = style(styles => {
-  let sideSize = measure(side, styles)
-  let contentSize = measure(content, styles)
+#let sidebar(side, content, withLine: true, sideWidth: 12%) = layout(size => {
+  let sideSize = measure(width: size.width,height: size.height,side)
+  let contentSize = measure(width: size.width,height: size.height,content)
   let height = calc.max(sideSize.height, contentSize.height) + 0.5em
   grid(
     columns: (sideWidth, 0%, 1fr),
