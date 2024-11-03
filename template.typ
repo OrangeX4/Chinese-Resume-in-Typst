@@ -124,7 +124,7 @@
   let side = content-array.filter(((i, x)) => calc.even(i)).map(((i, x)) => x)
   let content = content-array.filter(((i, x)) => calc.odd(i)).map(((i, x)) => x)
   let lines = if withLine == true {
-    content.enumerate().filter(((i, x)) => calc.odd(i)).map(((i, x)) => {
+    content.enumerate().map(((i, x)) => {
       let buffer = grid(
         columns: (sideWidth, 0%, 1fr),
         [], [], x,
