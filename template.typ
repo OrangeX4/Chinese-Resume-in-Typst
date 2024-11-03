@@ -7,10 +7,10 @@
 
 // 图标
 #let icon(path) = box(
-  baseline: 0.125em,
-  height: 1.0em,
+  // baseline: 0.125em,
+  height: 0.7em,
   width: 1.25em,
-  align(center + horizon, image(path))
+  align(center + horizon, image(path, height: 1em)),
 )
 
 #let faAngleRight = icon("icons/fa-angle-right.svg")
