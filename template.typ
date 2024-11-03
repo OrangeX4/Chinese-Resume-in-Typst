@@ -70,8 +70,7 @@
   show link: set text(fill: themeColor)
   
   // 主体设定
-  set par(justify: true)
-  show par: set block(spacing: 0.65em)
+  set par(justify: true, spacing: 1em)
   
   // 首部与照片
 
