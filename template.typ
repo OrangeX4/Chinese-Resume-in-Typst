@@ -19,10 +19,12 @@
 #let resume(
   size: 10pt,
   themeColor: rgb(38, 38, 125),
-  top: 1.5cm,
-  bottom: 2cm,
-  left: 2cm,
-  right: 2cm,
+  margin: (
+    top: 1.5cm,
+    bottom: 2cm,
+    left: 2cm,
+    right: 2cm,
+  ),
   photograph: "",
   photographWidth: 0em,
   gutterWidth: 0em,
@@ -32,12 +34,7 @@
   body
 ) = {
   // 页边距设定
-  set page(paper: "a4", numbering: "1", margin: (
-    top: top,
-    bottom: bottom,
-    left: left,
-    right: right,
-  ))
+  set page(paper: "a4", numbering: "1", margin: margin)
   
   // 基础字体设定
   set text(font: (font.main, font.cjk), size: size, lang: "zh")

@@ -25,10 +25,12 @@
   // 标题颜色
   themeColor: themeColor,
   // 控制纸张的边距
-  top: 1.5cm,
-  bottom: 2cm,
-  left: 2cm,
-  right: 2cm,
+  margin: (
+    top: 1.5cm,
+    bottom: 2cm,
+    left: 2cm,
+    right: 2cm,
+  ),
 
   // 如果需要姓名及联系信息居中，请删除下面关于头像的三行参数，并取消headerCenter的注释
   //headerCenter : true,
