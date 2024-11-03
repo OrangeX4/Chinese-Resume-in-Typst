@@ -118,6 +118,39 @@
   )
 })
 
+// 输入为多行的侧边栏
+#let multi-line-sidebar(..content, withLine: true, sideWidth: 12%) = layout(size => {
+  let content-array = content.pos().enumerate()
+  let side = content-array.filter(((i, x)) => calc.even(i)).map(((i, x)) => x)
+  let content = content-array.filter(((i, x)) => calc.odd(i)).map(((i, x)) => x)
+  let lines = if withLine == true {
+    content.enumerate().filter(((i, x)) => calc.odd(i)).map(((i, x)) => {
+      let buffer = grid(
+        columns: (sideWidth, 0%, 1fr),
+        [], [], x,
+      )
+      let height = measure(width: size.width, height: size.height, buffer).height
+      place(dy: -0.25em, line(end: (0em, height + 0.75em + 1pt), stroke: 0.05em))
+    })
+  } else {
+    ("",) * content-array.len()
+  }
+  let content-array = side.zip(lines, content).flatten()
+
+  set grid(align: (x, y) => (
+    if x == 0 {
+      right + horizon
+    } else {
+      left + horizon
+    }
+  ))
+  grid(
+    columns: (sideWidth, 0%, 1fr),
+    gutter: (0.75em),
+    ..content-array
+  )
+})
+
 
 // 个人信息
 #let info(

@@ -34,7 +34,7 @@
 
   // 如果需要姓名及联系信息居中，请删除下面关于头像的三行参数，并取消headerCenter的注释
   //headerCenter : true,
-  
+
   // 如果不需要头像，则将下面三行的参数注释或删除
   photograph: "profile.jpg",
   photographWidth: 10em,
@@ -46,7 +46,7 @@
 #info(
   color: themeColor,
   (
-    // 其实 icon 也可以直接填字符串, 如 "fa-phone.svg" 
+    // 其实 icon 也可以直接填字符串, 如 "fa-phone.svg"
     icon: faPhone,
     content: "(+86) 155-5555-5555"
   ),
@@ -80,34 +80,22 @@
 
 #sidebar(withLine: true, sideWidth: 12%)[
   2023.05
-  
+
   2020.09
 ][
   *南京大学* · 人工智能学院 · 人工智能专业
-  
+
   GPA: 4.48 / 5 · Rank: 15%
 ]
 
 
 == #faWrench 专业技能
 
-#sidebar(withLine: false, sideWidth: 12%)[
-  *操作系统*
-  
-  *掌握*
-  
-  *熟悉*
-
-  *了解*
-][
-  #faLinux Linux, #h(0.5em) #faWindows Windows
-  
-  React, JavaScript, Python
-  
-  Vue, TypeScript, Node.js
-
-  Webpack, Java
-]
+#multi-line-sidebar(withLine: false, sideWidth: 12%)[
+  *操作系统*][#faLinux Linux, #h(0.5em) #faWindows Windows
+][*掌握*][React, JavaScript, Python
+][*熟悉*][Vue, TypeScript, Node.js
+][*了解*][Webpack, Java]
 
 
 == #faAward 获奖情况
@@ -115,13 +103,13 @@
 #item(
   [ *人民奖学金* ],
   [ *一等奖 · 二等奖* ],
-  date[ 2021 年 11 月 – 2022 年 11 月 ]
+  date[ 2021 年 11 月 – 2022 年 11 月 ],
 )
 
 #item(
   [ *人工智能 +* ],
   [ *二等奖* ],
-  date[ 2021 年 11 月 – 2022 年 11 月 ]
+  date[ 2021 年 11 月 – 2022 年 11 月 ],
 )
 
 // == #faWork 实习经历
@@ -133,10 +121,10 @@
 #item(
   link(
     "https://github.com/OrangeX4/Latex-Sympy-Calculator",
-    [ *Latex Sympy Calculator* ]
+    [ *Latex Sympy Calculator* ],
   ),
   [ *个人项目* ],
-  date[ 2021 年 02 月 – 2021 年 04 月 ]
+  date[ 2021 年 02 月 – 2021 年 04 月 ],
 )
 
 #tech[ NodeJS, Python, VS Code ]
@@ -150,10 +138,10 @@
 #item(
   link(
     "https://github.com/OrangeX4/Reversi",
-    [ *黑白棋 Reversi* ]
+    [ *黑白棋 Reversi* ],
   ),
   [ *课程项目* ],
-  date[ 2021 年 02 月 – 2021 年 04 月 ]
+  date[ 2021 年 02 月 – 2021 年 04 月 ],
 )
 
 #tech[ React, Python, AI ]
@@ -171,5 +159,5 @@
 #item(
   [ *微软学生俱乐部技术部部长* ],
   [],
-  date[ 2021 年 09 月 – 2022 年 09 月 ]
+  date[ 2021 年 09 月 – 2022 年 09 月 ],
 )
