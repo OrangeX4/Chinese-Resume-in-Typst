@@ -7,10 +7,10 @@
 
 // 图标
 #let icon(path) = box(
-  baseline: 0.125em,
-  height: 1.0em,
+  // baseline: 0.125em,
+  height: 0.7em,
   width: 1.25em,
-  align(center + horizon, image(path))
+  align(center + horizon, image(path, height: 1em)),
 )
 
 #let faAngleRight = icon("icons/fa-angle-right.svg")
@@ -19,10 +19,12 @@
 #let resume(
   size: 10pt,
   themeColor: rgb(38, 38, 125),
-  top: 1.5cm,
-  bottom: 2cm,
-  left: 2cm,
-  right: 2cm,
+  margin: (
+    top: 1.5cm,
+    bottom: 2cm,
+    left: 2cm,
+    right: 2cm,
+  ),
   photograph: "",
   photographWidth: 0em,
   gutterWidth: 0em,
@@ -32,12 +34,7 @@
   body
 ) = {
   // 页边距设定
-  set page(paper: "a4", numbering: "1", margin: (
-    top: top,
-    bottom: bottom,
-    left: left,
-    right: right,
-  ))
+  set page(paper: "a4", numbering: "1", margin: margin)
   
   // 基础字体设定
   set text(font: (font.main, font.cjk), size: size, lang: "zh")
@@ -73,8 +70,7 @@
   show link: set text(fill: themeColor)
   
   // 主体设定
-  set par(justify: true)
-  show par: set block(spacing: 0.65em)
+  set par(justify: true, spacing: 1em)
   
   // 首部与照片
 
@@ -119,6 +115,39 @@
       content
       v(0.25em)
     },
+  )
+})
+
+// 输入为多行的侧边栏
+#let multi-line-sidebar(..content, withLine: true, sideWidth: 12%) = layout(size => {
+  let content-array = content.pos().enumerate()
+  let side = content-array.filter(((i, x)) => calc.even(i)).map(((i, x)) => x)
+  let content = content-array.filter(((i, x)) => calc.odd(i)).map(((i, x)) => x)
+  let lines = if withLine == true {
+    content.enumerate().map(((i, x)) => {
+      let buffer = grid(
+        columns: (sideWidth, 0%, 1fr),
+        [], [], x,
+      )
+      let height = measure(width: size.width, height: size.height, buffer).height
+      place(dy: -0.25em, line(end: (0em, height + 0.75em + 1pt), stroke: 0.05em))
+    })
+  } else {
+    ("",) * content-array.len()
+  }
+  let content-array = side.zip(lines, content).flatten()
+
+  set grid(align: (x, y) => (
+    if x == 0 {
+      right + horizon
+    } else {
+      left + horizon
+    }
+  ))
+  grid(
+    columns: (sideWidth, 0%, 1fr),
+    gutter: (0.75em),
+    ..content-array
   )
 })
 
