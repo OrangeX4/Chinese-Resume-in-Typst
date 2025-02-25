@@ -147,7 +147,7 @@
 ```typst
 #let cv-color = rgb("#284967")
 #set page(margin: (x: 0.9cm, y: 1.0cm))
-#set text(font: "Noto Serif CJK SC", size: 10pt)
+#set text(font: "Noto Sans CJK SC", size: 10pt)
 #set par(justify: true)
 #let chiline = {
   v(-8pt)
