@@ -44,92 +44,93 @@
 ```typst
 // 设置简历选项与头部
 #show: resume.with(
-  // 字体基准大小
+  // 字体和基准大小
   size: 10pt,
   // 标题颜色
-  themeColor: themeColor,
+  theme-color: theme-color,
   // 控制纸张的边距
-  top: 1.5cm,
-  bottom: 2cm,
-  left: 2cm,
-  right: 2cm,
-  // 如果不需要头像，则将下面的参数注释或删除
+  margin: (
+    top: 1.5cm,
+    bottom: 2cm,
+    left: 2cm,
+    right: 2cm,
+  ),
+
+  // 如果需要姓名及联系信息居中，请删除下面关于头像的三行参数，并取消headerCenter的注释
+  //headerCenter : true,
+
+  // 如果不需要头像，则将下面三行的参数注释或删除
   photograph: "profile.jpg",
-  photographWidth: 10em,
-  gutterWidth: 2em,
+  photograph-width: 10em,
+  gutter-width: 2em,
 )[
+  = 某某
 
-= 方橙
+  #info(
+    color: theme-color,
+    (
+      icon: fa-phone,
+      content: "(+86) 133-3333-3333",
+    ),
+    (
+      icon: fa-building-columns,
+      content: "某某大学",
+    ),
+    (
+      icon: fa-graduation-cap,
+      content: "某某专业",
+    ),
+    (
+      icon: fa-envelope,
+      content: "liming@example.com",
+      link: "mailto:liming@example.com",
+    ),
+    (
+      icon: fa-github,
+      content: "github.com/liming-dev",
+      link: "https://github.com/liming-dev",
+    ),
+  )
+][
+  #h(2em)
 
-#info(
-  color: themeColor,
-  (
-    // 其实 icon 也可以直接填字符串, 如 "fa-phone.svg" 
-    icon: faPhone,
-    content: "(+86) 155-5555-5555"
-  ),
-  (
-    icon: faBuildingColumns,
-    content: "南京大学",
-  ),
-  (
-    icon: faGraduationCap,
-    content: "人工智能",
-  ),
-  (
-    icon: faEnvelope,
-    content: "orangex4@qq.com",
-    link: "mailto:orangex4@qq.com"
-  ),
-  (
-    icon: faGithub,
-    content: "github.com/orangex4",
-    link: "https://github.com/orangex4",
-  ),
-)
-
-#h(2em)  // 手动顶行, 2em 代表两个字的宽度
-我是 OrangeX4，你也可以叫我 *一只方橙* 或 *方橙*。
-现在是南京大学人工智能学院 2020 级本科生，正深陷于学习数学、编程和英语的无边苦海中。
-你问为什么我的名字那么奇怪？ 大概是我喜欢吃橘子和橙子，又谐音方程，还有和我的名字谐音的缘故吧。
-喜欢一切新奇的东西，兴趣十分广泛。
-
+  *简历内容由 AI 生成，不代表真实内容。*作为一名计算机专业的学生，我专注于全栈开发和云计算技术。具有扎实的编程基础，热衷于开源项目贡献。在校期间参与多个实验室项目，对人工智能和分布式系统有深入研究。
 ]
 ```
 
 以及每一个块
 
 ```typst
-== #faGraduationCap 教育背景
+== #fa-graduation-cap 教育背景
 
-#sidebar(withLine: true, sideWidth: 12%)[
-  2023.05
-  
+#sidebar(with-line: true, side-width: 12%)[
+  2024.06
+
   2020.09
 ][
-  *南京大学* · 人工智能学院 · 人工智能专业
-  
-  GPA: 4.48 / 5 · Rank: 15%
+  *某某大学* · 某某学院 · 某某专业
+
+  GPA: 5 / 5 · Rank: 0%
 ]
 ```
 
 ```typst
-== #faCode 项目经历
+== #fa-code 项目经历
 
 #item(
   link(
-    "https://github.com/OrangeX4/Latex-Sympy-Calculator",
-    [ *Latex Sympy Calculator* ]
+    "https://github.com/liming-dev/cloud-platform",
+    [ *轻量级容器云平台* ],
   ),
-  [ *个人项目* ],
-  date[ 2021 年 02 月 – 2021 年 04 月 ]
+  [ *实验室项目* ],
+  date[ 2022 年 03 月 – 2022 年 12 月 ],
 )
 
-#tech[ NodeJS, Python, VS Code ]
+#tech[ Golang, Docker, Kubernetes ]
 
-一个用于在 VS Code 中使用 LaTeX 数学公式进行「科学计算」的插件
+基于 Kubernetes 的容器管理平台，提供Web界面的容器编排服务
 
-- 使用 ANTLR 将 LaTeX 语句编译为 Sympy 语句
-- 通过 Flask 搭建本地 HTTP 服务器与 VS Code 插件进行通信
-- 可以进行多种类型的科学计算，如积分求导、矩阵计算、无穷级数计算等
+- 设计实现了基于 RBAC 的多租户权限管理系统
+- 开发了容器资源动态伸缩和负载均衡模块
+- 使用 Prometheus 和 Grafana 构建监控告警系统
 ```
