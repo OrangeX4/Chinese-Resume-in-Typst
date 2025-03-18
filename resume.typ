@@ -31,8 +31,8 @@
     right: 2cm,
   ),
 
-  // 如果需要姓名及联系信息居中，请删除下面关于头像的三行参数，并取消headerCenter的注释
-  //headerCenter : true,
+  // 如果需要姓名及联系信息居中，请删除下面关于头像的三行参数，并取消header-center的注释
+  //header-center: true,
 
   // 如果不需要头像，则将下面三行的参数注释或删除
   photograph: "profile.jpg",
